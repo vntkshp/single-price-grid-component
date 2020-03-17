@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*,*::after,*::before{
+    padding:0px;
+    margin:0px;
+    border:0px;
+    box-sizing: border-box;
+    transition-duration: 100ms;
+}
+
+
+
+body{
+    background-color: rgb(238, 244, 248);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-size: 62.5%;
+}
+
+h1,h2,p,button{
+    margin:20px;
+    font-family: Karla;
+    color:white;
+}
+
+h1,h2,button{
+    font-weight: 700;
+}
+
+p{
+    line-height: 1.8em;
+    font-size: 1.005rem;
+}
+
+li{
+    list-style: none;
+    font-size: .9rem;
+    font-family: Karla;
+    color:white;
+    margin:0 0 5px 20px;
+    opacity: 80%;
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: auto 30px;
+    box-shadow: 0 0 30px  rgba(0,0,0,0.05);
+}
+.container>div{
+    padding: 20px;
+}
+
+.card1 h1{
+    color: hsl(179, 62%, 43%);
+}
+
+.card1 h2{
+    color: hsl(71, 73%, 54%);
+}
+
+.card1 p{
+    color:hsl(218, 22%, 67%);
+}
+
+
+.card2{
+    background: hsl(179, 62%, 43%) ;
+}
+
+.card2 p{
+    vertical-align: text-top;
+}
+.price{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.fade{
+    opacity: 70%;
+    vertical-align: 5px;
+}
+
+button{
+    background-color: hsl(71, 73%, 54%);
+    padding: 1em;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: calc(100% - 40px);
+    cursor: pointer;
+    box-shadow: 2px 5px 10px hsl(179, 66%, 37%);
+    margin-top: 0px;
+}
+
+.card3{
+    background-color: hsl(179, 46%, 54%);
+    border-radius:0 0 10px 10px;
+}
+
+footer p{
+    color: hsl(0, 0%, 19%);
+}
+
+/*  =======================
+            Grid
+    ======================= */
+
+    @media (min-width:670px){
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 665px;
+        }
+
+        .card1{
+            grid-column: span 2;
+        }
+
+        .card2{
+            border-bottom-left-radius: 10px;
+        }
+
+        .card3{
+            border-bottom-left-radius: 0px;
+        }
+    }
